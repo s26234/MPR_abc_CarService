@@ -10,8 +10,8 @@ public class CarStorage {
 
     private Car fordMondeo = new Car("ford", "mondeo", "aabbcc", CarType.STANDARD);
     private Car volkswagenTouareg = new Car("volkswagen", "touareg", "ddeeff", CarType.PREMIUM);
-    private Car fordExplorer = new Car("ford", "explorer", "abc", CarType.PREMIUM);
-    private Car bentleyArnage = new Car("bentley", "arnage", "ghj", CarType.STANDARD);
+    private Car fordExplorer = new Car("ford", "explorer", "wweerr", CarType.PREMIUM);
+    private Car bentleyArnage = new Car("bentley", "arnage", "rrttyy", CarType.STANDARD);
     private List<Car> carList = new ArrayList<>();
 
     public List<Car> getCarList() {

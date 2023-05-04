@@ -11,7 +11,6 @@ public class RentalInfo {
       this.startDate = startDate;
       this.endDate = endDate;
    }
-
    public double getPrice() {
       return price;
    }

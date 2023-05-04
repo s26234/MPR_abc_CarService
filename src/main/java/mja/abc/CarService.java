@@ -39,6 +39,7 @@ public class CarService {
     //do parametrow dodac LocalDate StartDate i EndDate
     public RentalInfo rentCar(User user, String vin, LocalDate startDate, LocalDate endDate) {
         Car car = carStorage.findCar(vin);
+        long days = ChronoUnit.DAYS.between(startDate, endDate);
         List<Rental> rentalList = rentalStorage.getRentalList();
 
         if (car==null) {
@@ -46,7 +47,6 @@ public class CarService {
             return null;
         }
 
-        int days = 0;
         if (days < 0) {
             System.out.println("Data początkowa jest wieksza od końcowej");
             return null;
@@ -70,7 +70,6 @@ public class CarService {
             System.out.println("Cena: " + calculation(ChronoUnit.DAYS.between(startDate, endDate), car.getCarType()));
         }
 
-      //  return null;
         return new RentalInfo(calculation(days, car.getCarType()), startDate, endDate);
     }
 
