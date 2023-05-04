@@ -36,7 +36,7 @@ public class CarService {
     }
 
     //zwroc RentalInfo
-    //do parametrow dodac LocalDate, StartDate, EndDate
+    //do parametrow dodac LocalDate StartDate i EndDate
     public RentalInfo rentCar(User user, String vin, LocalDate startDate, LocalDate endDate) {
         Car car = carStorage.findCar(vin);
         List<Rental> rentalList = rentalStorage.getRentalList();
@@ -73,9 +73,7 @@ public class CarService {
       //  return null;
         return new RentalInfo(calculation(days, car.getCarType()), startDate, endDate);
     }
-}
 
-  /*
     public void rentCar(String accName, String vin) {
         for (Car car : getAllCars()) {
             if (car.getVin().equals(vin)) {
@@ -91,6 +89,5 @@ public class CarService {
                 }
             }
         }
-    }
+}
 
-*/

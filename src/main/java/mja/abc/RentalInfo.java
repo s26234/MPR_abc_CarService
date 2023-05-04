@@ -1,5 +1,4 @@
 package mja.abc;
-
 import java.time.LocalDate;
 
 public class RentalInfo {
